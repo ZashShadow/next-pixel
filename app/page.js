@@ -130,7 +130,7 @@ export default function Home() {
 
           </div>
         </header>
-        <div className="grid-wrapper justify-between w-full flex flex-wrap gap-y-5 mt-5">
+        <div className="grid-wrapper  w-full flex flex-wrap gap-y-5 gap-x-7 mt-5">
           {
             activePage == "allGames" &&
             results?.map(result => (

@@ -72,7 +72,7 @@ const Gamecard = (props) => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <div className="card-wrapper  hover:cursor-pointer border-2 border-black pb-5 rounded-2xl  bg-white w-[23%] hover:scale-105 min-h-60 flex flex-col overflow-hidden transition-all hover:shadow-lg shadow-[#455089]">
+                <div className="card-wrapper  hover:cursor-pointer border-2 border-black pb-5 rounded-2xl  bg-white w-[270px] hover:scale-105 min-h-60 flex flex-col overflow-hidden transition-all hover:shadow-lg shadow-[#455089]">
                     <div className="cover-wrapper h-40 overflow-hidden">
                         <img src={props.image} alt="game image" className='object-cover' />
                     </div>
@@ -94,7 +94,7 @@ const Gamecard = (props) => {
                     </div>
                 </div>
             </DialogTrigger>
-            <DialogContent className={"min-w-[60vw] rounded-2xl flex gap-9 p-10 bg-[#232946]"}>
+            <DialogContent className={"min-w-[60vw] rounded-2xl flex max-md:flex-col gap-9 p-10 bg-[#232946]"}>
                 <div className="image w-[100%]">
                     <img className='rounded-2xl border-2 border-black' src={props.image} alt="game-image" />
                 </div>
