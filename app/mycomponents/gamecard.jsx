@@ -20,7 +20,7 @@ const Gamecard = (props) => {
     const [publishers, setPublishers] = useState([])
     const [tempresults, setTempResults] = useState("")
     const [isFavourite, setIsFavourite] = useState(false)
-    const apiKey = process.env.NEXT_PUBLIC_RAWG_API_KEY;;
+    const apiKey = process.env.NEXT_PUBLIC_RAWG_API_KEY;
 
 
     useEffect(() => {

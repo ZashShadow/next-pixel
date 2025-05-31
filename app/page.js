@@ -39,7 +39,8 @@ export default function Home() {
       setFavourites(localFavourites);
       console.log("Favs Loaded!");
     }
-
+    console.log("API is", apiKey);
+    
 
   }, [])
 
