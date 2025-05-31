@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { Heart, Search } from 'lucide-react';
-import Image from 'next/image';
+import { Heart } from 'lucide-react';
 import {
     Dialog,
     DialogContent,

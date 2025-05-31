@@ -2,10 +2,8 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Heart, Search } from 'lucide-react';
 import Gamecard from "./mycomponents/gamecard";
-import Gamemodal from "./mycomponents/gamemodal";
 
 export default function Home() {
   const apiKey = process.env.NEXT_PUBLIC_RAWG_API_KEY;
@@ -39,7 +37,7 @@ export default function Home() {
       setFavourites(localFavourites);
       console.log("Favs Loaded!");
     }
-    console.log("API is", apiKey);
+    // console.log("API is", apiKey);
     
 
   }, [])
