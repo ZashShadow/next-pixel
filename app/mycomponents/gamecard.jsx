@@ -101,7 +101,7 @@ const Gamecard = (props) => {
                 <div className="info mt-3 w-full">
                     <DialogHeader>
                         <DialogTitle className={"text-6xl font-bold"}>{props.name}</DialogTitle>
-                        <DialogDescription className={"flex  justify-center text-white mt-2 flex-col gap-5"}>
+                        <DialogDescription className={"flex  justify-center max-md:items-center text-white mt-2 flex-col gap-5"}>
                             <span> {publishers == "" ? "" : `${publishers} •`}  {releaseDate} &bull; Rated: {props.maturity}</span>
                             <span>{props.rating == "0" ? "none" : `Rating: ${props.rating}/5 ⭐`}</span>
                             <Button className={`w-[220px] ${isFavourite && "bg-[#455089]  text-white hover:bg-[#5e668b]"}`} onClick={handleFavourite}>

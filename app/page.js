@@ -109,40 +109,54 @@ export default function Home() {
 
   return (
     <div className="canvas  flex justify-center py-10 bg-[#232946] min-w-screen min-h-screen">
-      <div className="app-wrapper text-white w-[70%]">
+      <div className="app-wrapper text-white w-[70%] max-sm:w-[90%]">
         <header className="flex flex-col gap-10">
           <div className="first-row">
-            <h1 className="text-white  text-8xl font-extrabold">Next Pixel</h1>
+            <h1 className="text-white  text-8xl max-md:text-6xl max-sm:text-6xl font-extrabold">Next Pixel</h1>
             <h2 className="text-white  text-3xl font-semibold">Game Finder and DB</h2>
           </div>
-          <div className="secondrow ml-auto flex w-[45%] gap-2">
+          <div className="secondrow  flex ml-auto w-[500px] max-md:w-full gap-2">
             <Button id="favourites" className={activePage == "favourites" && "bg-[#455089]  text-white hover:bg-[#5e668b]"} onClick={(e) => { handleClick(e); fetchFavourites() }}>
               Favourites<Heart className={activePage == "favourites" && "fill-white"} />
             </Button>
             <Button id="allGames" className={activePage == "allGames" && "bg-[#455089]  text-white hover:bg-[#5e668b]"} onClick={handleClick}>
               All <Search className={activePage == "favourites" && "fill-white"} />
             </Button>
-            <div className={`input-wrapper rounded-sm bg-white relative w-full flex items-center justify-center transition-all duration-300 ease-in-out ${activePage === "favourites" && "bg-zinc-400 hover:cursor-not-allowed"}`}>
+            <div className={`input-wrapper rounded-sm bg-white relative  w-full flex items-center justify-center transition-all duration-300 ease-in-out ${activePage === "favourites" && "bg-zinc-400 hover:cursor-not-allowed"}`}>
               <input type="text" name="search" id="search" className={`text-black pr-10 w-full  outline-none px-3 `} placeholder={activePage === "favourites" ? "Switch to the all tab to search" : "Search"} onChange={handleInput} value={searchValue} disabled={activePage === "favourites"} />
               <Search className="absolute text-[#8C8C8C] right-3 pointer-events-none" />
             </div>
-
-
           </div>
         </header>
-        <div className="grid-wrapper  w-full flex flex-wrap gap-y-5 gap-x-7 mt-5">
+        <div className="grid-wrapper   w-full flex items-center justify-center flex-wrap gap-y-5 gap-x-7 mt-5">
           {
-            activePage == "allGames" &&
-            results?.map(result => (
-              <Gamecard key={result.id} platforms={result.parent_platforms} favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
-            ))
+            activePage == "allGames" && (
+              results?.length > 0 ? (
+                results?.map(result => (
+                  <Gamecard key={result.id} platforms={result.parent_platforms} favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
+                ))
+              ) : (
+                <div className="text-zinc-500 mt-[20%]">No games yet, start by searching</div>
+              )
+            )
           }
           {
+            activePage == "favourites" && (
+              fetchedFavourites?.length > 0 ? (
+                fetchedFavourites?.map(result => (
+                  <Gamecard key={result.id} platforms={result.parent_platforms} favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
+                ))
+              ) : (
+                <div className="text-zinc-500 mt-[20%]">No games yet, start by searching</div>
+              )
+            )
+          }
+          {/* {
             activePage == "favourites" &&
             fetchedFavourites?.map(result => (
               <Gamecard key={result.id} platforms={result.parent_platforms} favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
             ))
-          }
+          } */}
         </div>
       </div>
     </div>
