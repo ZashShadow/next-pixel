@@ -38,7 +38,7 @@ export default function Home() {
       console.log("Favs Loaded!");
     }
     // console.log("API is", apiKey);
-    
+
 
   }, [])
 
@@ -96,7 +96,7 @@ export default function Home() {
     setFetchedFavourites(updatedFavourites);
     // console.log(updatedFavourites);
     // console.log(updatedFavourites[0].parent_platforms[0].platform.name);
-    
+
   }
   useEffect(() => {
     console.log(results);
@@ -134,13 +134,13 @@ export default function Home() {
           {
             activePage == "allGames" &&
             results?.map(result => (
-              <Gamecard key={result.id} platforms={result.parent_platforms}  favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
+              <Gamecard key={result.id} platforms={result.parent_platforms} favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
             ))
           }
           {
             activePage == "favourites" &&
             fetchedFavourites?.map(result => (
-              <Gamecard key={result.id} platforms={result.parent_platforms}  favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
+              <Gamecard key={result.id} platforms={result.parent_platforms} favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
             ))
           }
         </div>
