@@ -151,12 +151,6 @@ export default function Home() {
               )
             )
           }
-          {/* {
-            activePage == "favourites" &&
-            fetchedFavourites?.map(result => (
-              <Gamecard key={result.id} platforms={result.parent_platforms} favourites={favourites} setFavourites={setFavourites} gameID={result.id} name={result.name} image={result.background_image} released={result.released} rating={result.rating} maturity={result.esrb_rating?.name ?? "none "} />
-            ))
-          } */}
         </div>
       </div>
     </div>
