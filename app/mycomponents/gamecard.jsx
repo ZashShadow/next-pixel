@@ -50,7 +50,7 @@ const Gamecard = (props) => {
                 setPublishers(data.publishers[0].name === undefined ? "" : data.publishers[0].name)
                 setTempResults(data)
             } catch (error) {
-                console.error("Error fetching developer:", error);
+                // console.error("Error fetching developer:", error);
             }
         }
         getPublishers();

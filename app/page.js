@@ -22,8 +22,8 @@ export default function Home() {
       return;
     }
     localStorage.setItem("favouritegames", JSON.stringify(favourites));
-    console.log("Favs Updated");
-    console.log(favourites);
+    // console.log("Favs Updated");
+    // console.log(favourites);
   }, [favourites])
 
 
@@ -35,7 +35,7 @@ export default function Home() {
     }
     else {
       setFavourites(localFavourites);
-      console.log("Favs Loaded!");
+      // console.log("Favs Loaded!");
     }
     // console.log("API is", apiKey);
 
@@ -98,10 +98,11 @@ export default function Home() {
     // console.log(updatedFavourites[0].parent_platforms[0].platform.name);
 
   }
-  useEffect(() => {
-    console.log(results);
 
-  }, [results])
+  // useEffect(() => {
+  //   console.log(results);
+
+  // }, [results])
 
 
 
