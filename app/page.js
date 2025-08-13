@@ -38,8 +38,6 @@ export default function Home() {
       // console.log("Favs Loaded!");
     }
     // console.log("API is", apiKey);
-
-
   }, [])
 
 
@@ -99,10 +97,6 @@ export default function Home() {
 
   }
 
-  // useEffect(() => {
-  //   console.log(results);
-
-  // }, [results])
 
 
 
