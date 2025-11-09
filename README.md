@@ -1,8 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Pixel
 
-## Getting Started
+**Next Pixel** is a Game Search Engine that lets you find and save your favourite games!  
+🌐 **Try it instantly:** 👉 [next-pixel-pi.vercel.app](https://next-pixel-pi.vercel.app) 👈
 
-First, run the development server:
+➡️ *No need to install anything locally—check out the hosted demo above to get started right away!*
+
+---
+
+## Features
+
+- 🔎 **Search Games:** Quickly search for games using the [RAWG API](https://rawg.io/apidocs).
+- 💾 **Save Favourites:** Mark games as favourites to keep them handy between sessions (stored locally).
+- 🎮 **Game Details:** View details including images, release date, ratings, maturity, publishers, and supported platforms, all in a stylish modal.
+- 🏷️ **Platform Badges:** Instantly see which platforms (e.g., PC, Nintendo) a game is available for.
+- ⚡ **Modern UI:** Responsive and modern UI built using [Next.js](https://nextjs.org/) App Router, Tailwind CSS, and Radix UI components.
+
+---
+
+## Getting Started Locally
+
+While you can use the live demo **without any setup**, you can also run Next Pixel on your machine:
+
+### 1. Clone and install dependencies:
+
+```bash
+git clone https://github.com/ZashShadow/next-pixel.git
+cd next-pixel
+npm install
+```
+
+### 2. Add your RAWG API key
+
+Create a `.env.local` file at the project root and add:
+
+```
+NEXT_PUBLIC_RAWG_API_KEY=your_rawg_api_key
+```
+
+### 3. Start the development server:
 
 ```bash
 npm run dev
@@ -14,23 +49,32 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technology Stack
+
+- **Framework:** Next.js (App Router)
+- **UI:** Tailwind CSS, Radix UI
+- **Icons:** Lucide-react
+- **API:** [RAWG Video Games Database API](https://rawg.io/apidocs)
+- **State & Hooks:** React (useState, useEffect)
+- **Deployment:** [Vercel](https://vercel.com)
+
+---
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [RAWG API Docs](https://rawg.io/apidocs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is for educational/personal use. Check the repository for license details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Made with ❤️ by [ZashShadow](https://github.com/ZashShadow)
